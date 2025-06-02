@@ -1,0 +1,16 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>AngularJS App</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+  <script src="app.js"></script>
+</head>
+<body>
+  <div ng-controller="MainController">
+    <h1>{{ title }}</h1>
+    <input type="number" ng-model="base_num" placeholder="Enter the number you want to convert">
+  </div>
+</body>
+</html>
