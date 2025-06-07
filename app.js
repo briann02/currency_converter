@@ -1,5 +1,12 @@
 // app.js
-angular.module('myApp', [])
-  .controller('MainController', function($scope) {
-    $scope.title = "Brian's Currency Converter!";
-  });
+var app = angular.module('myApp', []);
+ 
+// list of currencies
+app.controller('DisplayController', function($scope) {
+    $scope.currencies = ["U.S. Dollar", "JP Yen", "Euro"];
+});
+
+// conversion logic
+app.controller('ConvertController', function($scope) {
+    
+});

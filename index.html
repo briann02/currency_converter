@@ -3,14 +3,25 @@
 <html ng-app="myApp">
 <head>
   <meta charset="UTF-8">
-  <title>AngularJS App</title>
+  <title>AngularJS Currency Converter by Brian Nguyen</title>
+  <link rel="stylesheet" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
   <script src="app.js"></script>
 </head>
 <body>
-  <div ng-controller="MainController">
-    <h1>{{ title }}</h1>
-    <input type="number" ng-model="base_num" placeholder="Enter the number you want to convert">
+  <div ng-controller="DisplayController">
+    <h1>Brian Nguyen's Currency Controller Project</h1>
+
+    <div class="horizontal-row">
+      <input type="number" ng-model="base_num" placeholder="Enter money amount here">
+      <select ng-model="base_curr" ng-options="x for x in currencies"></select>
+      <h2> convert to </h2>
+      <select ng-model="new_curr" ng-options="x for x in currencies"></select>
+    </div>
+
+    <div class="horizontal-row" ng-controller="ConvertController">
+      <h2 ng-model="final_ans"> That is {{final_num}} in {{final_curr}}</h2>
+    </div>
   </div>
 </body>
 </html>

@@ -1,0 +1,29 @@
+/* general */
+body {
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  color: black;
+}
+
+/* header */
+h1 {
+  margin-bottom: 20px;
+  font-size: 1.8em;
+}
+
+/* make converter horizontal */
+.horizontal-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  outline-color: black;
+}
+
+/* input and select */
+input[type="number"],
+select {
+  padding: 8px 12px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
