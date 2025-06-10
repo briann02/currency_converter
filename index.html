@@ -12,15 +12,15 @@
   <div ng-controller="DisplayController">
     <h1>Brian Nguyen's Currency Controller Project</h1>
 
-    <div class="horizontal-row">
-      <input type="number" ng-model="base_num" placeholder="Enter money amount here">
-      <select ng-model="base_curr" ng-options="x for x in currencies"></select>
-      <h2> convert to </h2>
-      <select ng-model="new_curr" ng-options="x for x in currencies"></select>
-    </div>
+    <div ng-controller="ConvertController">
+      <div class="horizontal-row">
+        <input type="number" ng-model="base_num" placeholder="Enter money amount here"  ng-change="convert()">
+        <select ng-model="base_curr" ng-options="x for x in currencies"  ng-change="convert()"></select>
+        <h2> convert to </h2>
+        <select ng-model="new_curr" ng-options="x for x in currencies"  ng-change="convert()"></select>
+      </div>
 
-    <div class="horizontal-row" ng-controller="ConvertController">
-      <h2 ng-model="final_ans"> That is {{final_num}} in {{final_curr}}</h2>
+      <h2 ng-if="final_num"> That is {{final_num | number: 2}} in {{final_curr}}</h2>
     </div>
   </div>
 </body>
